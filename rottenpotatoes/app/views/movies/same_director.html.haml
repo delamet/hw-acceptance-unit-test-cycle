@@ -1,0 +1,8 @@
+%h1 Movies with same directory
+
+%table#movies
+  %thead
+  %tbody
+    - @movies.each do |movie|
+      %tr
+        %td= movie.title 
