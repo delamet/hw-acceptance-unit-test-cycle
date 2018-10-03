@@ -4,7 +4,14 @@ class Movie < ActiveRecord::Base
   end
   
   def movies_with_same_director
-    movies = Movie.where("director = \"#{director}\"").where("title != \"#{title}\"")
+    puts "Director is #{director}"
+    all_movies = Movie.all
+    movies = []
+    all_movies.each do |movie| 
+      if movie.director == director && movie.title != title
+        movies.push(movie)
+      end
+    end
     return movies
   end
 end

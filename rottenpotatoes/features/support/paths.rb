@@ -23,7 +23,7 @@ module NavigationHelpers
       movie_path(Movie.find_by_title($1))
       
     when /the Similar Movies page for "(.*)"/
-      same_director_path(Movie.find_by_title($1).id)
+      same_director_path(Movie.find_by_title($1).title)
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

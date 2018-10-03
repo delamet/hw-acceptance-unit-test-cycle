@@ -51,6 +51,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find params[:id]
     @movie.update_attributes!(movie_params)
     flash[:notice] = "#{@movie.title} was successfully updated."
+    @movie.save!
     redirect_to movie_path(@movie)
   end
 
@@ -62,7 +63,7 @@ class MoviesController < ApplicationController
   end
   
   def same_director
-    movie = Movie.find(params[:id])
+    movie = Movie.find_by_title(params[:title])
     @movies = movie.movies_with_same_director
     if movie.director == "" || movie.director == nil
       # No director 
