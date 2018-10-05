@@ -1,0 +1,41 @@
+.......
+
+1 deprecation warning total
+
+Finished in 0.08026 seconds (files took 1.53 seconds to load)
+7 examples, 0 failures
+
+Coverage report generated for Cucumber Features, RSpec to /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 53 / 62 LOC (85.48%) covered.
+.......
+
+1 deprecation warning total
+
+Finished in 0.07878 seconds (files took 1.52 seconds to load)
+7 examples, 0 failures
+
+Coverage report generated for Cucumber Features, RSpec to /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 53 / 62 LOC (85.48%) covered.
+
+Movies: movies with same director method
+  same director
+    Should return a movie with same director
+  different director
+    Should not return any movies
+  no director
+    Shoult return nil indicating the movie has no director
+
+MoviesController
+  index
+    Movies does not equal nil
+  destroy
+    See if movie gets destroyed
+  same_director redirec to index
+    Should redirect to index
+  same_director should display director
+    Should not redirect to index
+
+1 deprecation warning total
+
+Finished in 0.07476 seconds (files took 1.53 seconds to load)
+7 examples, 0 failures
+
+Coverage report generated for Cucumber Features, RSpec to /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 53 / 62 LOC (85.48%) covered.
