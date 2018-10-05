@@ -28,21 +28,3 @@ describe "Movies: movies with same director method" do
     end
 end
 
-describe  MoviesController, :type => :controller do 
-    describe "index" do 
-        it "Movies does not equal nil" do 
-            get :index
-            assigns(:movies).should_not == nil
-        end
-    end
-    
-    describe "destroy" do 
-        it "See if movie gets destroyed" do 
-            movie = Movie.create(:title => "test")
-            get :destroy, :id => movie
-            same_movie = Movie.find_by_title("title")
-            same_movie.should == nil
-        end
-    end
-    
-end
