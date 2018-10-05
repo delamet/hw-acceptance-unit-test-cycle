@@ -89,7 +89,25 @@ Feature: search for movies by director
     Then I should be on the home page                                      # features/step_definitions/web_steps.rb:230
     And I should see "'Alien' has no director info"                        # features/step_definitions/web_steps.rb:105
 
-3 scenarios (3 passed)
-17 steps (17 passed)
-0m0.264s
+  Scenario: add director to existing movie                    # features/movie_test.feature:36
+    When I go to the edit page for "Star Wars"                # features/step_definitions/web_steps.rb:48
+    And I fill in "Director" with "Ridley Scott"              # features/step_definitions/web_steps.rb:60
+    And I press "Update Movie Info"                           # features/step_definitions/web_steps.rb:52
+    Then the director of "Star Wars" should be "Ridley Scott" # features/step_definitions/movie_test_steps.rb:8
+
+  Scenario: add director to existing movie                       # features/movie_test.feature:42
+    When I go to the edit page for "Blade Runner"                # features/step_definitions/web_steps.rb:48
+    And I fill in "Director" with "Ridley Scott"                 # features/step_definitions/web_steps.rb:60
+    And I press "Update Movie Info"                              # features/step_definitions/web_steps.rb:52
+    Then the director of "Blade Runner" should be "Ridley Scott" # features/step_definitions/movie_test_steps.rb:8
+
+  Scenario: add director to existing movie                   # features/movie_test.feature:48
+    When I go to the edit page for "THX-1138"                # features/step_definitions/web_steps.rb:48
+    And I fill in "Director" with "Ridley Scott"             # features/step_definitions/web_steps.rb:60
+    And I press "Update Movie Info"                          # features/step_definitions/web_steps.rb:52
+    Then the director of "THX-1138" should be "Ridley Scott" # features/step_definitions/movie_test_steps.rb:8
+
+6 scenarios (6 passed)
+32 steps (32 passed)
+0m0.390s
 Coverage report generated for Cucumber Features, RSpec to /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/coverage. 53 / 62 LOC (85.48%) covered.

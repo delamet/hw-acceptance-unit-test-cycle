@@ -32,3 +32,22 @@ Scenario: can't find similar movies if we don't know director (sad path)
   When  I follow "Find Movies With Same Director"
   Then  I should be on the home page
   And   I should see "'Alien' has no director info"
+  
+  Scenario: add director to existing movie
+  When I go to the edit page for "Star Wars"
+  And  I fill in "Director" with "Ridley Scott"
+  And  I press "Update Movie Info"
+  Then the director of "Star Wars" should be "Ridley Scott"
+  
+  Scenario: add director to existing movie
+  When I go to the edit page for "Blade Runner"
+  And  I fill in "Director" with "Ridley Scott"
+  And  I press "Update Movie Info"
+  Then the director of "Blade Runner" should be "Ridley Scott"
+  
+  Scenario: add director to existing movie
+  When I go to the edit page for "THX-1138"
+  And  I fill in "Director" with "Ridley Scott"
+  And  I press "Update Movie Info"
+  Then the director of "THX-1138" should be "Ridley Scott"
+  
